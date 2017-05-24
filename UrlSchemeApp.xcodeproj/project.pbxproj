@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0230FBAA1ED5BFB40039B600 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0230FBA91ED5BFB40039B600 /* ImageVC.swift */; };
 		02DE824F1ED499E9001B604B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE824E1ED499E9001B604B /* AppDelegate.swift */; };
 		02DE82511ED499E9001B604B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE82501ED499E9001B604B /* ViewController.swift */; };
 		02DE82541ED499E9001B604B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DE82521ED499E9001B604B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0230FBA91ED5BFB40039B600 /* ImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		02DE824B1ED499E9001B604B /* UrlSchemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrlSchemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE824E1ED499E9001B604B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DE82501ED499E9001B604B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +56,10 @@
 		02DE824D1ED499E9001B604B /* UrlSchemeApp */ = {
 			isa = PBXGroup;
 			children = (
-				02DE824E1ED499E9001B604B /* AppDelegate.swift */,
-				02DE82501ED499E9001B604B /* ViewController.swift */,
 				02DE82521ED499E9001B604B /* Main.storyboard */,
+				02DE82501ED499E9001B604B /* ViewController.swift */,
+				0230FBA91ED5BFB40039B600 /* ImageVC.swift */,
+				02DE824E1ED499E9001B604B /* AppDelegate.swift */,
 				02DE82551ED499E9001B604B /* Assets.xcassets */,
 				02DE82571ED499E9001B604B /* LaunchScreen.storyboard */,
 				02DE825A1ED499E9001B604B /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				02DE82511ED499E9001B604B /* ViewController.swift in Sources */,
 				02DE824F1ED499E9001B604B /* AppDelegate.swift in Sources */,
+				0230FBAA1ED5BFB40039B600 /* ImageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				02DE825F1ED499E9001B604B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
