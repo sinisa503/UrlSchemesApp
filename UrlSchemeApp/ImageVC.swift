@@ -28,13 +28,12 @@ class ImageVC: UIViewController {
       }
    }
    
-   //Interface builder for some reason won't make connection so button is made in code
    private func makeCancelButton() {
       let height = CGFloat(35.0)
       let constraint = CGFloat(8.0)
       let width = view.bounds.width - (constraint * 2)
       let frame = CGRect(x: view.bounds.midX - (width / 2), y: view.bounds.maxY - (height + constraint) , width: width, height: height)
-      let cancelButton = UIButton(frame: frame)
+      let cancelButton = CustomButton(frame: frame)
       cancelButton.backgroundColor = UIColor.blue
       cancelButton.setTitle("Cancel", for: .normal)
       cancelButton.setTitleColor(UIColor.white, for: .normal)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020259AA1ED5D6CC00557C42 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020259A91ED5D6CC00557C42 /* CustomButton.swift */; };
 		0230FBAA1ED5BFB40039B600 /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0230FBA91ED5BFB40039B600 /* ImageVC.swift */; };
 		02DE824F1ED499E9001B604B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE824E1ED499E9001B604B /* AppDelegate.swift */; };
 		02DE82511ED499E9001B604B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DE82501ED499E9001B604B /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		020259A91ED5D6CC00557C42 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0230FBA91ED5BFB40039B600 /* ImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
 		02DE824B1ED499E9001B604B /* UrlSchemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrlSchemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DE824E1ED499E9001B604B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				02DE82521ED499E9001B604B /* Main.storyboard */,
 				02DE82501ED499E9001B604B /* ViewController.swift */,
 				0230FBA91ED5BFB40039B600 /* ImageVC.swift */,
+				020259A91ED5D6CC00557C42 /* CustomButton.swift */,
 				02DE824E1ED499E9001B604B /* AppDelegate.swift */,
 				02DE82551ED499E9001B604B /* Assets.xcassets */,
 				02DE82571ED499E9001B604B /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				020259AA1ED5D6CC00557C42 /* CustomButton.swift in Sources */,
 				02DE82511ED499E9001B604B /* ViewController.swift in Sources */,
 				02DE824F1ED499E9001B604B /* AppDelegate.swift in Sources */,
 				0230FBAA1ED5BFB40039B600 /* ImageVC.swift in Sources */,

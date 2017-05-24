@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="KvN-rc-8rL">
-                                <rect key="frame" x="16" y="20" width="343" height="623"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="KvN-rc-8rL">
+                                <rect key="frame" x="16" y="20" width="343" height="393.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HxP-xd-gKZ">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="104.5"/>
@@ -40,7 +40,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toh-Oe-dC9">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toh-Oe-dC9" customClass="CustomButton" customModule="UrlSchemeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="74.5" width="343" height="30"/>
                                                 <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Call">
@@ -53,7 +53,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LyA-LL-Y5q">
-                                        <rect key="frame" x="0.0" y="197.5" width="343" height="104.5"/>
+                                        <rect key="frame" x="0.0" y="144.5" width="343" height="104.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxi-cV-ino">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -66,8 +66,11 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="send"/>
+                                                <connections>
+                                                    <action selector="mailActionWithSend:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="vak-CD-q7w"/>
+                                                </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-wh-xA5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-wh-xA5" customClass="CustomButton" customModule="UrlSchemeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="74.5" width="343" height="30"/>
                                                 <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Send">
@@ -80,7 +83,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0Ta-QR-7OE">
-                                        <rect key="frame" x="0.0" y="395.5" width="343" height="104.5"/>
+                                        <rect key="frame" x="0.0" y="289" width="343" height="104.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxw-h8-Ec3">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -93,8 +96,11 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="search"/>
+                                                <connections>
+                                                    <action selector="goToUrlFromKeyboard:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="VZw-qq-gOt"/>
+                                                </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0E-cB-lWu">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0E-cB-lWu" customClass="CustomButton" customModule="UrlSchemeApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="74.5" width="343" height="30"/>
                                                 <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Go">
@@ -106,24 +112,36 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-5G-Qf8">
-                                        <rect key="frame" x="0.0" y="593" width="343" height="30"/>
-                                        <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Select Image">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5b-By-soB"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <variation key="heightClass=compact" spacing="19"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-5G-Qf8" customClass="CustomButton" customModule="UrlSchemeApp" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="547" width="200" height="100"/>
+                                <color key="backgroundColor" red="0.018645260479999998" green="0.4776622653" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="QGB-LB-ePb"/>
+                                    <constraint firstAttribute="height" constant="100" id="nbI-st-978"/>
+                                </constraints>
+                                <state key="normal" title="Select Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5b-By-soB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="KvN-rc-8rL" secondAttribute="trailing" id="AqJ-c0-58n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QP2-5G-Qf8" secondAttribute="bottom" constant="20" id="8Ea-xt-qCm">
+                                <variation key="heightClass=compact" constant="120"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="KvN-rc-8rL" secondAttribute="trailing" id="AqJ-c0-58n">
+                                <variation key="heightClass=compact" constant="200"/>
+                            </constraint>
+                            <constraint firstItem="QP2-5G-Qf8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NDq-h7-8b7">
+                                <variation key="heightClass=compact" constant="220"/>
+                            </constraint>
                             <constraint firstItem="KvN-rc-8rL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mbm-Cg-L4M"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KvN-rc-8rL" secondAttribute="bottom" constant="24" id="oi3-qK-h7A"/>
                             <constraint firstItem="KvN-rc-8rL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qhd-7c-iMP"/>
                         </constraints>
                     </view>

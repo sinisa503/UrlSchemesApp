@@ -27,24 +27,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    
    @IBAction func callPhone(_ sender: UIButton) {
       if let phoneNumber = phoneLabel.text {
-         if verifyUrl(urlString: phoneNumber) {
-            UIApplication.shared.open(URL(string: "tel://\(phoneNumber)")!, options: [:], completionHandler: nil)
+         let urlString = "tel://\(phoneNumber)"
+         if verifyUrl(urlString: urlString) {
+            UIApplication.shared.open(URL(string: urlString)!, options: [:], completionHandler: nil)
          }else {
             issueAlert(title: "Error", messagge: "You have entered phone wrong number")
          }
       }
+      phoneLabel.text = ""
    }
    
-   @IBAction func sendEmail(_ sender: UIButton) {
+   @IBAction func mailActionWithSend(_ sender: UITextField) {
       if let emaiAddress = mailLabel.text {
-         if verifyUrl(urlString: emaiAddress) {
-            UIApplication.shared.open(URL(string: "mailto:\(emaiAddress)")!, options: [:], completionHandler: nil)
+         let urlString = "mailto:\(emaiAddress)"
+         if verifyUrl(urlString: urlString) {
+            UIApplication.shared.open(URL(string: urlString)!, options: [:], completionHandler: nil)
          }else {
             issueAlert(title: "Error", messagge: "You have entered wrong email address")
          }
       }
+      mailLabel.text = ""
    }
    
+   @IBAction func sendEmail(_ sender: UIButton) {
+      if let emaiAddress = mailLabel.text {
+         let urlString = "mailto:\(emaiAddress)"
+         if verifyUrl(urlString: urlString) {
+            UIApplication.shared.open(URL(string: urlString)!, options: [:], completionHandler: nil)
+         }else {
+            issueAlert(title: "Error", messagge: "You have entered wrong email address")
+         }
+      }
+      mailLabel.text = ""
+   }
+   
+   @IBAction func goToUrlFromKeyboard(_ sender: UITextField) {
+      if let url = urlLabel.text {
+         if verifyUrl(urlString: url) {
+            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+         }else {
+            issueAlert(title: "Error", messagge: "You have entered wrong URL")
+         }
+      }
+      urlLabel.text = ""
+   }
    @IBAction func goToURL(_ sender: UIButton) {
       if let url = urlLabel.text {
          if verifyUrl(urlString: url) {
@@ -53,6 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             issueAlert(title: "Error", messagge: "You have entered wrong URL")
          }
       }
+      urlLabel.text = ""
    }
    
    @IBAction func selectImage(_ sender: UIButton) {
